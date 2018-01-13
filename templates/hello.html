@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block mainbody %}<p>继承了 base.html 文件</p>
+{% endblock %}
+
+<h1>{{ x|first|upper }}</h1>
+<h1>{{ x|truncatewords:"3" }}</h1>
+<h1>{{ x|length }}</h1>
+
+<h1>{% include "index.html" %}</h1>
+
+{% ifequal y z %}
+    <h1>Welcome!</h1>
+{% endifequal %}
+
+{% if z %}
+     <h1>if endif!</h1>
+{% endif %}
+
+{% if z %}
+   <h1>if 1!</h1>
+{% elif y %}
+   <h1>if 2!</h1>
+{% else %}
+   <h1>if 3!else</h1>
+{% endif %}
+
+
+</body>
+</html>

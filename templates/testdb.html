@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{# context时只能穿dic，可判断内容 #}
+<h1>{{ name }}</h1>
+<h1>{{ dic }}</h1>
+<ul>
+{% for k,v in dic.items %}
+    <li>{{ k }} </li>
+    <li>{{ v }} </li>
+{% endfor %}
+{% for k in listStr %}
+    <li>{{ k.name }} </li>
+{% endfor %}
+</ul>
+</body>
+</html>
